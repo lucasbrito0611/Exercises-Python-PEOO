@@ -1,8 +1,10 @@
 import math
 
 class Circulo:
-    def __init__(self):
+    def __init__(self, raio):
         self.__raio = 0
+        
+        self.set_raio(raio)
 
     def set_raio(self, raio):
         self.__raio = raio
@@ -17,13 +19,10 @@ class Circulo:
 class UI:
     @staticmethod
     def main():
-        c = Circulo()
+        raio = float(input('Digite o comprimento do raio: '))
 
-        print('Digite o comprimento do raio:')
-        raio = float(input())
-
-        c.set_raio(raio)
-
+        c = Circulo(raio)
+        
         print(f'Área do Círculo: {c.calc_area():.1f}')
         print(f'Circunferência do Círculo: {c.calc_circunferencia():.1f}')
 

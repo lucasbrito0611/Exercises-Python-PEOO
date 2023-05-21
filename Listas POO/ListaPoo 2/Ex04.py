@@ -1,7 +1,10 @@
 class Cinema:
-    def __init__(self):
+    def __init__(self, dia, horario):
         self.__dia = ''
         self.__horario = 0
+
+        self.set_dia(dia)
+        self.set_horario(horario)
 
     def set_dia(self, dia):
         dias = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sabado']
@@ -14,7 +17,7 @@ class Cinema:
     def get_dia(self):
         return self.__dia
     def get_horario(self):
-        return self__.horario
+        return self.__horario
 
     def inteira(self):
         valor = 20
@@ -33,15 +36,12 @@ class Cinema:
 
 class UI:
     def main():
-        c = Cinema()
-        print('Digite o dia da semana:')
-        dia = input()
-        print('Digite o horário da sessão:')
-        horario = input()
+        dia = input('Digite o dia da semana: ')
+        horario = input('Digite o horário da sessão: ')
+        
         horas, minutos = map(int, horario.split(':'))
     
-        c.set_dia(dia)
-        c.set_horario(horas)
+        c = Cinema(dia, horas)
     
         print(f'Inteira = R${c.inteira():.2f}')
         print(f'Meia-entrada = R${c.meia_entrada():.2f}')
@@ -54,7 +54,7 @@ UI.main()
 #                                 - dia : string
 #                                 - horario : int
 # -------------------------------------------------------------------------------------------
-#                                 + Cinema()
+#                                 + Cinema(dia: string, horario: int)
 #                                 + set_dia(dia: string) : void
 #                                 + set_horario(horario: double) : void
 #                                 + get_dia() : string
