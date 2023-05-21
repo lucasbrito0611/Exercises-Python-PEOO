@@ -1,7 +1,7 @@
 class Viagem:
     def __init__(self):
-        self.distancia = int(input('Digite a distância: '))
-        self.tempo = input('Digite o tempo no formato hh:mm:').split(':')
+        self.distancia = 0
+        self.tempo = 0
 
     def calculo(self):
         horas = int(self.tempo[0])
@@ -14,5 +14,7 @@ class Viagem:
         return (f'{velocidade:.0f} Km/h')
 
 x = Viagem()
+x.distancia = int(input('Digite a distância: '))
+x.tempo = input('Digite o tempo no formato hh:mm:').split(':')
 
 print(x.calculo())

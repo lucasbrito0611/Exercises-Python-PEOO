@@ -1,25 +1,27 @@
 class Disciplina:
     def __init__(self):
-        self.nome = input('Digite o nome da disciplina: ')
-        self.nota1 = int(input('Digite a nota do primeiro bimestre: '))
-        self.nota2 = int(input('Digite a nota do segundo bimestre: '))
-        self.nota3 = int(input('Digite a nota do terceiro bimestre: '))
-        self.nota4 = int(input('Digite a nota do quarto bimestre: '))
+        self.nome = ''
+        self.nota1 = 0
+        self.nota2 = 0
+        self.nota3 = 0
+        self.nota4 = 0
+        self.notafinal = 0
        
     def calculo(self):
         media = ((self.nota1 * 2) +  (self.nota1 * 2) + (self.nota1 * 3) + (self.nota1 * 3)) / 10
-        
-        if media >= 60:
-            return (f'Aprovado\nMedia = {media:.0f}')
-        else:
-            print('Você ficou de recuperação')
-            self.notafinal = int(input('Digite a nota da prova final: '))
-            mediafinal = ((self.notafinal + media) / 2)
-            if mediafinal >= 60:
-                return (f'Aprovado\nMedia = {mediafinal:.0f}')
-            else:
-                return (f'Reprovado\nMedia = {mediafinal:.0f}')
+        return media
+    def calculofinal(self):
+        mediafinal = ((((self.nota1 * 2) +  (self.nota1 * 2) + (self.nota1 * 3) + (self.nota1 * 3)) / 10) + self.notafinal) / 2
+        return mediafinal
 
 x = Disciplina()
+x.nome = input('Digite o nome da disciplina: ')
+x.nota1 = int(input())
+x.nota2 = int(input())
+x.nota3 = int(input())
+x.nota4 = int(input())
 
 print(x.calculo())
+if x.calculo() < 60:
+    x.notafinal = int(input())
+    print(x.calculofinal())

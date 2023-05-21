@@ -1,7 +1,7 @@
 class Cinema:
     def __init__(self):
-        self.dia = input('Digite o dia da semana: ')
-        self.horario = input('Digite o horário: ').split(':')
+        self.dia = ''
+        self.horario = 0
 
     def valor(self):
         ingresso = ''
@@ -27,5 +27,7 @@ class Cinema:
         
 
 x = Cinema()
+x.dia = input('Digite o dia da semana: ')
+x.horario = input('Digite o horário: ').split(':')
 
 print(x.valor())
