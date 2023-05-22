@@ -9,11 +9,11 @@ class Disciplina:
         self.__notafinal = 0
 
         self.set_nome(nome)
-        self.set_nota1(int(nota1))
-        self.set_nota2(int(nota2))
-        self.set_nota3(int(nota3))
-        self.set_nota4(int(nota4))
-        self.set_notafinal(int(notafinal))
+        self.set_nota1(nota1)
+        self.set_nota2(nota2)
+        self.set_nota3(nota3)
+        self.set_nota4(nota4)
+        self.set_notafinal(notafinal)
 
     def set_nome(self, nome):
         if nome.isalpha(): self.__nome = nome
@@ -94,6 +94,5 @@ class UI:
                 print('Aprovado')
             else:
                 print('Reprovado')
-
 
 UI.main()

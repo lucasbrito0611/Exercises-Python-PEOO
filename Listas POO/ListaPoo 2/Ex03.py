@@ -33,6 +33,6 @@ class UI:
         
         v = Viagem(d, horas)
 
-        print(f'Velocidade media = {v.velocidade_media()} km/h')
+        print(f'Velocidade media = {v.velocidade_media():.2f} km/h')
 
 UI.main()
