@@ -36,3 +36,17 @@ class UI:
         print(f'Velocidade media = {v.velocidade_media():.2f} km/h')
 
 UI.main()
+
+# -------------------------------------------------------------------------------------------
+#                                 DIAGRAMA:
+#                                 Cinema
+#                                 - dia : string
+#                                 - horario : int
+# -------------------------------------------------------------------------------------------
+#                                 + Cinema(dia: string, horario: int)
+#                                 + set_dia(dia: string) : void
+#                                 + set_horario(horario: double) : void
+#                                 + get_dia() : string
+#                                 + get_horario() : double
+#                                 + inteira() : int
+#                                 + meia_entrada() : int

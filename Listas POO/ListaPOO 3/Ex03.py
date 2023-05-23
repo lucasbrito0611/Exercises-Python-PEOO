@@ -69,3 +69,23 @@ class UI:
             print('Essa equação possui duas raízes.')
             print(f'Raízes = {e.Raiz1():.2f} e {e.Raiz2():.2f}')
 UI.main()
+
+# -------------------------------------------------------------------------------------------
+#                                 DIAGRAMA:
+#                                 Equacao
+#                                 - a : int
+#                                 - b : int
+#                                 - c : int
+# -------------------------------------------------------------------------------------------
+#                                 + Equacao(a: int, b: int, c: int)
+#                                 + SetA(a: int) : void
+#                                 + SetB(b: int) : void
+#                                 + SetC(c: int) : void
+#                                 + GetA() : int
+#                                 + GetB() : int
+#                                 + GetC() : int
+#                                 + CalcDelta() : int
+#                                 + TemRaizesReais() : string
+#                                 + Raiz1() : double
+#                                 + Raiz2() : double
+#                                 + ToString() : string
