@@ -49,7 +49,6 @@ class Equacao:
 
 
 class UI:
-
     @staticmethod
     def main():
         a = int(input('Digite o coeficiente A: '))
