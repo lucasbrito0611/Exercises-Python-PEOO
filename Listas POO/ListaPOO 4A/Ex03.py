@@ -13,7 +13,7 @@ class Cliente:
         socio.__socio = self
 
     def GetLimite(self):
-        if self.__socio:
+        if self.__socio != None:
             return f'R$ {self.__limite + self.__socio.__limite:.2f}'
         else:
             return f'R$ {self.__limite:.2f}'
@@ -68,6 +68,8 @@ class UI:
             if op == 3:
                 if indice == 0:
                     print('Crie uma empresa antes de associar clientes.')
+                elif len(empresa.Listar()) < 2:
+                    print('Você precisa ter pelo menos dois clientes para fazer uma associação.')
                 else:
                     nome1 = input('Digite o nome do primeiro cliente: ')
                     nome2 = input('Digite o nome do segundo cliente: ')
@@ -83,6 +85,8 @@ class UI:
 
                     if cliente1 == None or cliente2 == None:
                         print('Os clientes não foram achados na empresa.')
+                    elif cliente1 == cliente2:
+                        print('Os dois sócios devem ser diferentes')
                     else:
                         cliente1.SetSocio(cliente2)
                         print('Assosiação feita com sucesso.')

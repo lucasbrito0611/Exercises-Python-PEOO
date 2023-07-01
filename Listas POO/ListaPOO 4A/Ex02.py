@@ -1,73 +1,3 @@
-# class Musica:
-#     def __init__(self, titulo, artista, album):
-#         self.__titulo = titulo
-#         self.__artista = artista
-#         self.__album = album
-#         # self.__datainclusao = datainclusao
-#         # self.__duracao = duracao
-
-#     def __str__(self):
-#         return f'Titulo: {self.__titulo} - Artista: {self.__artista} - Álbum: {self.__album}'
-    
-# class Playlist():
-#     def __init__(self, nome, descricao):
-#         self.__nome = nome
-#         self.__descricao = descricao
-#         self.__musicas = []
-
-#     def Inserir(self, musica):
-#         if musica in self.__musicas:
-#             return 'Erro'
-        
-#         self.__musicas.append(musica)
-#         return musica
-    
-#     def Listar(self):
-#         return self.__musicas
-    
-#     def __str__(self):
-#         return f'Nome: {self.__nome} - Descrição: {self.__descricao} '
-    
-# class UI:
-#     @staticmethod
-#     def menu():
-#         print('1 - Nova playlist, 2 - Inserir musica, 3 - Listar playlist, 0 - Fim: ')
-        
-#     def main():
-#         op = None
-#         play = None
-        
-#         while op != 0:
-#             if op == 1:
-#                 nome = input('Nome da playlist: ')
-#                 descricao = input('Descrição da playlist: ')
-#                 play = Playlist(nome, descricao)
-#                 print(play)
-#             if op == 2:    
-#                 if play == None:
-#                     print('Crie uma playlist antes de inserir músicas.')
-#                 else:
-#                     titulo = input('Título da música: ')
-#                     artista = input('Artista da música: ')
-#                     album = input('Álbum da música: ')
-#                     music = Musica(titulo, artista, album)
-#                     inserir = play.Inserir(music)
-#                     if inserir == 'Erro':
-#                         print('Essa música já foi inserida.')
-#                     else:
-#                         print('Música inserida:', inserir)
-#             if op == 3:
-#                 if play == None:
-#                     print('Crie uma playlist antes de listar as músicas.')
-#                 else:
-#                     print('Músicas na playlist:', play.Listar())
-            
-#             op = int(input('1 - Nova playlist, 2 - Inserir musica, 3 - Listar playlist, 0 - Fim: '))
-
-# UI.main()
-
-# ------------------------------------------------------------------
-
 import datetime
 
 class Musica:
@@ -77,6 +7,9 @@ class Musica:
         self.__album = album
         # self.__datainclusao = datetime.datetime.today()
         self.__duracao = duracao
+
+    def GetTitulo(self):
+        return self.__titulo
 
     def __str__(self):
         # data = self.__datainclusao.strftime("%d/%m/%Y")
@@ -142,7 +75,9 @@ class UI:
                     print('Crie uma playlist antes de listar as músicas.')
                 else:
                     listar = play.Listar()
-                    print('Músicas na playlist:', *listar)
+                    print('Músicas na playlist:')
+                    for musica in listar:
+                        print(f'{music.GetTitulo()}')
 
             if op == 4:
                 if play == None:
