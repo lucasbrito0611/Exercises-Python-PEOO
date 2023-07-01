@@ -46,6 +46,7 @@ class UI:
         indice = 0
 
         while op != 0:
+            op = int(input('1 - Nova empresa, 2 - Inserir cliente, 3- Nova associação, 4 - Listar clientes, 0 - Fim: '))
             if op == 1:
                 if indice == 0:
                     nome_emp = input('Digite o nome da empresa: ')
@@ -100,6 +101,5 @@ class UI:
                     for clientes in listar:
                         print(f'{clientes.GetNome()} - {clientes.GetLimite()}')
             
-            op = int(input('1 - Nova empresa, 2 - Inserir cliente, 3- Nova associação, 4 - Listar clientes, 0 - Fim: '))
 
 UI.main()

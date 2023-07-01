@@ -52,6 +52,7 @@ class UI:
         play = None
         
         while op != 0:
+            op = int(input('1 - Nova playlist, 2 - Inserir musica, 3 - Listar playlist, 4 - Duração da Playlist, 0 - Fim: '))
             if op == 1:
                 nome = input('Nome da playlist: ')
                 descricao = input('Descrição da playlist: ')
@@ -85,6 +86,5 @@ class UI:
                 else:
                     print(f'Tempo Total = {play.tempo_total()}')
             
-            op = int(input('1 - Nova playlist, 2 - Inserir musica, 3 - Listar playlist, 4 - Duração da Playlist, 0 - Fim: '))
 
 UI.main()
